@@ -16,7 +16,7 @@ class Q_DECL_EXPORT FramelessWidget : public QWidget
 {
 	Q_OBJECT
 public:
-	FramelessWidget();
+	FramelessWidget(QWidget* parent = Q_NULLPTR);
 
 	void set_resizable(const bool enable);
 

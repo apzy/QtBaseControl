@@ -11,7 +11,8 @@
 #include <dwmapi.h>
 #endif
 
-FramelessWidget::FramelessWidget()
+FramelessWidget::FramelessWidget(QWidget* parent)
+    :QWidget(parent)
 {
     m_resizable = true;
     setAttribute(Qt::WA_StyledBackground, true);

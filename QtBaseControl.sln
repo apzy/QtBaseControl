@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtBaseControl", "QtBaseControl\QtBaseControl.vcxproj", "{7C35DAFF-BD7C-4BD9-80FC-7F8A68E17E39}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ControlTest", "ControlTest\ControlTest.vcxproj", "{53918043-377D-455D-AC29-ABFDBEAD70D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{7C35DAFF-BD7C-4BD9-80FC-7F8A68E17E39}.Debug|x64.Build.0 = Debug|x64
 		{7C35DAFF-BD7C-4BD9-80FC-7F8A68E17E39}.Release|x64.ActiveCfg = Release|x64
 		{7C35DAFF-BD7C-4BD9-80FC-7F8A68E17E39}.Release|x64.Build.0 = Release|x64
+		{53918043-377D-455D-AC29-ABFDBEAD70D7}.Debug|x64.ActiveCfg = Debug|x64
+		{53918043-377D-455D-AC29-ABFDBEAD70D7}.Debug|x64.Build.0 = Debug|x64
+		{53918043-377D-455D-AC29-ABFDBEAD70D7}.Release|x64.ActiveCfg = Release|x64
+		{53918043-377D-455D-AC29-ABFDBEAD70D7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
