@@ -31,7 +31,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>msvc2019_64</QtInstall>
+    <QtInstall>6.2.2_msvc2019_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
@@ -100,6 +100,7 @@
     <QtUic Include="ControlTest.ui" />
     <QtMoc Include="ControlTest.h" />
     <ClCompile Include="..\QtBaseControl\x64\Debug\moc\moc_FramelessWidget.cpp" />
+    <ClCompile Include="..\QtBaseControl\x64\Debug\moc\moc_RichEditor.cpp" />
     <ClCompile Include="ControlTest.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

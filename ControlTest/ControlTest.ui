@@ -32,25 +32,18 @@
    <property name="spacing">
     <number>0</number>
    </property>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="max">
-     <property name="minimumSize">
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
       <size>
-       <width>50</width>
-       <height>50</height>
+       <width>40</width>
+       <height>20</height>
       </size>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(96, 165, 255);
-border:none;</string>
-     </property>
-     <property name="text">
-      <string>max</string>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-    </widget>
+    </spacer>
    </item>
    <item row="1" column="2">
     <widget class="QPushButton" name="close">
@@ -72,35 +65,39 @@ border:none;</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="max">
+     <property name="minimumSize">
       <size>
-       <width>40</width>
-       <height>20</height>
+       <width>50</width>
+       <height>50</height>
       </size>
      </property>
-    </spacer>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(96, 165, 255);
+border:none;</string>
+     </property>
+     <property name="text">
+      <string>max</string>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
    </item>
-   <item row="2" column="2">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
+   <item row="2" column="0" colspan="3">
+    <widget class="RichEditor" name="textEdit"/>
    </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RichEditor</class>
+   <extends>QTextEdit</extends>
+   <header>RichEditor.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="ControlTest.qrc"/>
  </resources>

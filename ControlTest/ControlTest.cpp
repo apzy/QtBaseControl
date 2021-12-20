@@ -1,5 +1,6 @@
 #include "ControlTest.h"
 
+
 ControlTest::ControlTest(QWidget *parent)
     : FramelessWidget(parent)
 {

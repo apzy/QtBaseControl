@@ -43,5 +43,8 @@
     <ClCompile Include="..\QtBaseControl\x64\Debug\moc\moc_FramelessWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\QtBaseControl\x64\Debug\moc\moc_RichEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

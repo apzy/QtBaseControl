@@ -31,7 +31,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>msvc2019_64</QtInstall>
+    <QtInstall>6.2.2_msvc2019_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
@@ -108,9 +108,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FramelessWidget.cpp" />
+    <ClCompile Include="RichEditor.cpp" />
+    <ClCompile Include="RichEditorPrivate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="FramelessWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RichEditor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RichEditorPrivate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
