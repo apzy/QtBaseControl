@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QGuiApplication>
 #include <QScreen>
+#include <QFile>
 #include <qwindow.h>
 #include <qevent.h>
 
@@ -22,6 +23,27 @@ FramelessWidget::FramelessWidget(QWidget* parent)
 void FramelessWidget::set_resizable(const bool enable)
 {
     m_resizable = enable;
+}
+
+bool FramelessWidget::set_style_file(const QString& filePath)
+{
+    bool bSuccess = true;
+
+    QFile qssFile(filePath);
+    if (qssFile.open(QFile::ReadOnly))
+    {
+        QString qssStyle;
+        qssStyle = qssFile.readAll();
+        this->setStyleSheet(qssStyle);
+    }
+    else
+    {
+        bSuccess = false;
+        qDebug("read qss file failed!");
+    }
+    qssFile.close();
+
+    return bSuccess;
 }
 
 bool FramelessWidget::nativeEvent(const QByteArray& eventType, void* message, qintptr* result)
