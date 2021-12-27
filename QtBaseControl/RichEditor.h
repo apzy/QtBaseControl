@@ -18,6 +18,10 @@ public Q_SLOTS:
     bool open_file(const QString& filePath);
 
     bool save_file();
+
+    /// @brief 保存文件到指定路径 保存的文件一定要加后缀
+    /// @param filePath 保存的文件路径
+    /// @return 是否保存成功
     bool save_file(const QString& filePath);
 
     void text_normal();

@@ -1,4 +1,6 @@
 #include "ControlTest.h"
+#include <qstandardpaths.h>
+#include <quuid.h>
 
 
 ControlTest::ControlTest(QWidget *parent)
@@ -14,6 +16,7 @@ ControlTest::ControlTest(QWidget *parent)
 
 void ControlTest::slot_max_clicked()
 {
+    ui.textEdit->save_file(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/test.html");
 #if 0
     if (isMaximized())
     {
@@ -23,7 +26,6 @@ void ControlTest::slot_max_clicked()
     {
         showMaximized();
     }
-#else
     if (isFullScreen())
     {
         showNormal();

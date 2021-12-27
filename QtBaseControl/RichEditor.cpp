@@ -6,6 +6,7 @@
 #include <QMimeDatabase>
 #include <QTextDocumentWriter>
 #include <QFont>
+#include <QFile>
 
 RichEditor::RichEditor(QWidget *parent)
     : QTextEdit(parent)
@@ -60,14 +61,23 @@ bool RichEditor::save_file()
 
 bool RichEditor::save_file(const QString& filePath)
 {
+    Q_D(RichEditor);
     bool bSuccess = true;
     if (filePath.isEmpty() || filePath.startsWith(u":/"))
         bSuccess = false;
 
     if (bSuccess)
     {
-        QTextDocumentWriter writer(filePath);
-        bSuccess = writer.write(document());
+        if (!QFile::exists(filePath))
+        {
+            bSuccess = d->create_file(filePath);
+        }
+
+        if (bSuccess)
+        {
+            QTextDocumentWriter writer(filePath);
+            bSuccess = writer.write(document());
+        }
     }
 
     return bSuccess;
